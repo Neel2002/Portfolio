@@ -54,7 +54,7 @@ app.post("/contact",(req,res)=>{
     transporter.sendMail(mailOptions,async (err,info)=>{
         if(err) throw Error(err);
         console.log(info);
+        res.redirect("/");
     });
 
-    res.redirect("/");
 })
