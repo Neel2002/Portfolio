@@ -21,7 +21,7 @@ app.listen(5000, ()=>{
 })
 
 app.get("/",(req, res)=>{
-    res.render("index")
+    res.render("home")
 })
 
 app.post("/",(req,res)=>{
