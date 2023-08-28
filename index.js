@@ -1,20 +1,20 @@
-const express= require('express')
+const express = require('express')
 const nodemailer= require('nodemailer')
 const bodyParser = require("body-parser")
-
 require('dotenv').config();
 
 const app= express();
+
+app.use(express.static(__dirname+ "/public"));
+app.set("views" + __dirname + "/views");
+
+app.set("view engine", "ejs");
 
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(__dirname+ "/public"));
-app.set("views" + __dirname + "/views");
-
-app.set("view engine", "ejs");
 
 app.listen(5000, ()=>{
     console.log("Listening on port 5000")
@@ -24,7 +24,7 @@ app.get("/",(req, res)=>{
     res.render("home")
 })
 
-app.post("/",(req,res)=>{
+app.post("/contact",(req,res)=>{
     console.log(req.body);
     
     const receiverClient = "neel02.shah@gmail.com";
