@@ -5,23 +5,23 @@ require('dotenv').config();
 
 const app= express();
 
-app.use(express.static(__dirname+ "/public"));
-app.set("views" ,"./views");
+// set for public access
+app.use(express.static(__dirname + "/public"));
 
+// set for ejs views for response
+app.set('views', __dirname + '/views');
 app.set("view engine", "ejs");
-
-
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.listen(5000, ()=>{
-    console.log("Listening on port 5000")
+    console.log("Listening on port 5000");
 })
 
 app.get("/",(req, res)=>{
-    res.render("home")
+    res.render("home");
 })
 
 app.post("/contact",(req,res)=>{
@@ -54,7 +54,7 @@ app.post("/contact",(req,res)=>{
     transporter.sendMail(mailOptions,async (err,info)=>{
         if(err) throw Error(err);
         console.log(info);
-        res.redirect("/");
     });
 
+    res.redirect("/");
 })
