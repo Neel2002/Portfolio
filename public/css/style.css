@@ -1167,4 +1167,21 @@ p.subtitle {
 	width: 100%;
 	column-gap: 2rem;
 }
+/* @media only screen and (max-width: 600px) {
+	.rotate-box-1-wrapper {
+		background-color: lightblue;
+		padding-left: 0;
+		width: 100%;
+		float: none ;
+		margin-right: 0;
+		margin-bottom: 30px;
+	    text-align: center;
+	}
+	
+	
+  } */
+
+
+
+
 /* ===== End buttons ===== */
