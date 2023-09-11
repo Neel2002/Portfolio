@@ -982,7 +982,7 @@ p.subtitle {
 
 /* ===== Begin OWL carousel ===== */
 .owl-carousel {
-	cursor: e-resize;
+	/* cursor: e-resize; */
 }
 .owl-theme .owl-controls {
 	margin-top: 30px;
