@@ -1167,6 +1167,12 @@ p.subtitle {
 	width: 100%;
 	column-gap: 2rem;
 }
+@media only screen and (max-width: 992px){
+	.exp{
+		flex-direction: column;
+	}
+	
+}
 /* @media only screen and (max-width: 600px) {
 	.rotate-box-1-wrapper {
 		background-color: lightblue;
